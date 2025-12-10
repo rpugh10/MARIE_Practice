@@ -5,13 +5,13 @@ loopConditions, Load i
 				Jump end
 
 loopBody, Input
-		  Store Value
-		  Load Value
-		  Subt Large
-		  SkipCond 800
-		  Jump loopIncrement
-		  Load Value
-		  Store Large
+		  Store Value //Storing user input in value
+		  Load Value //Loading Value into the AC
+		  Subt Large // Subtracting by Large
+		  SkipCond 800 //Skip next instruction if AC > 0
+		  Jump loopIncrement //Jump to loop increment (this instruction will be skipped if condition is true)
+		  Load Value //Loading value into AC
+		  Store Large //Storing large in value
 		  Jump loopIncrement
 
 
