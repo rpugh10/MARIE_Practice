@@ -11,7 +11,7 @@ loopBody, Input
 		  SkipCond 800 //Skip next instruction if AC > 0
 		  Jump loopIncrement //Jump to loop increment (this instruction will be skipped if condition is true)
 		  Load Value //Loading value into AC
-		  Store Large //Storing large in value
+		  Store Large //Storing value in large
 		  Jump loopIncrement
 
 
