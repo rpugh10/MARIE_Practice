@@ -1,0 +1,34 @@
+loopConditions, Load i
+				Subt Five
+				Skipcond 400
+				Jump loopBody
+				Jump end
+
+loopBody, Input
+		  Store Value
+		  Load Value
+		  Subt Large
+		  SkipCond 800
+		  Jump loopIncrement
+		  Load Value
+		  Store Large
+		  Jump loopIncrement
+
+
+loopIncrement, Load i
+	   		   Add One
+			   Store i
+			   jump loopConditions
+
+
+end, Load Large
+	 Output
+	 Halt
+
+
+
+Large, DEC 0
+Five, DEC 5
+i, DEC 0
+One, DEC 1
+Value, DEC 0
