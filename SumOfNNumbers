@@ -1,0 +1,38 @@
+Input
+Store numOfTimes
+Jump loopCondition
+
+loopCondition, Load i
+			   Subt numOfTimes
+			   SkipCond 400 //Will skip the next instruction if this condition becomes true
+			   Jump loopBody 
+			   Jump end
+
+loopBody, Input
+	      Store numbers
+		  Load sum
+		  Add numbers
+		  Store sum
+		  Jump loopIncrement
+
+loopIncrement, Load i
+			   Add One
+			   Store i
+			   Jump loopCondition
+
+
+end, load sum
+	 Output
+	 Halt
+
+
+
+
+
+
+
+numOfTimes, DEC 0
+numbers, DEC 0
+One, DEC 1
+i, DEC 0
+sum, DEC 0
