@@ -1,0 +1,36 @@
+main, Input
+	  Store Num1
+	  Input 
+	  Store Num2
+	  JnS Multiply
+	  Jump end
+
+
+Multiply, HEX 0
+
+Check, Load Num2 
+	   SkipCond 400
+	   Jump Loop
+	   JumpI Multiply
+		
+Loop, 	Load product
+		Add Num1 
+		Store product
+		Load Num2
+		Subt One
+		Store Num2
+		Jump Check
+		  
+
+end, Load product
+	 Output
+	 Halt
+
+
+
+
+
+Num1, DEC 0
+Num2, DEC 0
+product, DEC 0
+One, DEC 1
