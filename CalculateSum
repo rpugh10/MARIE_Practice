@@ -1,0 +1,28 @@
+main, Input 
+	  Store userInput
+	  JnS SumToN
+	  Jump end
+
+
+SumToN, HEX 0
+
+check, Load userInput
+	   SkipCond 400
+	   Jump loop
+	   JumpI SumToN
+
+loop, Load Total
+	  Add userInput
+	  Store Total
+	  Load userInput
+	  Subt One
+	  Store userInput
+	  Jump check
+
+end, Load Total
+	 Output 
+	 Halt
+
+userInput, DEC 0
+Total, DEC 0
+One, DEC 1
